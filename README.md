@@ -1,2 +1,2 @@
 # Banco Algoritmo
- Primeiro Repositorio Versionado
+ Primeiro Repositorio Versionado.
