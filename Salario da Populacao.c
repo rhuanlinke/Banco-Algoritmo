@@ -14,7 +14,7 @@ O final da leitura de dados se dará com a entrada de um salário negativo.
 
 int main()
 {
-    int contador;
+    int contador = 0;
     float filhos, somafilhos, salario, maiorsalario, contadorsalarioate, somasalario = 0.00, populacao;
 
     printf("Coleta de dados da prefeitura.\n\nQual a populacao da cidade?\n");
