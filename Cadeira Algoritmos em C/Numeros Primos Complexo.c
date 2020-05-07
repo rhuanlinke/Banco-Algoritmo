@@ -12,31 +12,36 @@
 
 int main(){
 	
-    int qtdnro, nro, nro2, maiornro = 0, menornro = 0, cont = 0, cont2 = 0, cont3 = 0, cont4 = 0, cont5 = 0;
-    float somaprimo = 0;
+    int qtdnro, nro, nro2, maiornro = 0, menornro = 0, cont = 0, cont2, cont3 = 0, cont4 = 0, cont5 = 0;
+    float somaprimo = 0, mediaprimo;
     
     printf("Quantidade de numeros:\n");
     scanf("%d",&qtdnro);
     
     while(cont < qtdnro){
         cont++;
+        cont2 = 1;
         printf("Digite um nro\n");
         scanf("%d",&nro);
+        
         while(cont2 < nro){
-            cont2++;
             if(nro % cont2 == 0){
                 cont3++;
-            }        
+            }
+            
+        cont2++;
+        
         }
-        if(maiornro == 0){
-            maiornro = nro;
-        }
-        if(menornro == 0){
-            menornro = nro; 
-        }
+        
         if(cont3 == 2){
+            if(maiornro == 0){
+                maiornro = nro;
+            }
+            if(menornro == 0){
+                menornro = nro; 
+            }
             somaprimo = somaprimo + nro; //3. Faz a media aritimetica dos numeros primos encontrados.
-            cont4++;                     //0. Contador de numeros primos
+            cont4++;                     //0. Contador de numeros primos, para poder ser calculado na 3. Média aritmetica.
             if(nro > maiornro){          //2. Vrifica qual o maior numero primo digitado pelo usuario.
                 maiornro = nro;
             }
@@ -48,8 +53,9 @@ int main(){
             }
         }
     }
+    printf("qtd primos: %d",cont4);
     printf("\nQuantidade de primos maiores que 1000: %d", cont5);
     printf("\nMaior nro primo digitado: %d",maiornro);
     printf("\nMenor nro primo digitado: %d",menornro);
-    printf("\nMedia dos primos: %f",somaprimo/qtdnro);
+    printf("\nMedia dos primos: %.2f",somaprimo/cont4);
 }
