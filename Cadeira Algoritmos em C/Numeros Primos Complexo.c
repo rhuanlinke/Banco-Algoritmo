@@ -12,7 +12,7 @@
 
 int main(){
 	
-    int qtdnro, nro, nro2, maiornro = 0, menornro = 0, cont = 0, cont2, cont3 = 0, cont4 = 0, cont5 = 0;
+    int qtdnro, nro, resto, maiornro = 0, menornro = 0, cont = 0, cont2, cont3, cont4 = 0, cont5 = 0;
     float somaprimo = 0, mediaprimo;
     
     printf("Quantidade de numeros:\n");
@@ -20,17 +20,18 @@ int main(){
     
     while(cont < qtdnro){
         cont++;
-        cont2 = 1;
+        cont2 = 0;
+        cont3 = 0;
         printf("Digite um nro\n");
         scanf("%d",&nro);
         
         while(cont2 < nro){
-            if(nro % cont2 == 0){
+        cont2++;
+            resto = nro % cont2;
+            //printf("\nResto: %d\n",resto);
+            if(resto == 0){
                 cont3++;
             }
-            
-        cont2++;
-        
         }
         
         if(cont3 == 2){
