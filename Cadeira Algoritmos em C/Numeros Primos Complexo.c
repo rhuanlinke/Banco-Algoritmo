@@ -54,7 +54,7 @@ int main(){
             }
         }
     }
-    printf("qtd primos: %d",cont4);
+    printf("\nQuantidade de numeros primos: %d",cont4);
     printf("\nQuantidade de primos maiores que 1000: %d", cont5);
     printf("\nMaior nro primo digitado: %d",maiornro);
     printf("\nMenor nro primo digitado: %d",menornro);
