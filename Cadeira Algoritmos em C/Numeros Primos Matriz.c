@@ -4,7 +4,7 @@ int main()
 {
     int matriz[10][100], i, j, ip=0, id, ir;
     
-    printf("Digite 2000 nros inteiros\n");
+    printf("Digite nros inteiros\n");
     
     i = 0;
     while(i < 100){
@@ -19,7 +19,8 @@ int main()
         }
         i++;
     }
-
+    i = 0;
+    j = 0;
     while(i < 100){
         j = 0;
         while(j < 10){
